@@ -1,0 +1,12 @@
+{
+  "name": "vidutil",
+  "version": "0.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "dist/"
+  ],
+  "scripts": {
+    "prepublish": "make"
+  }
+}

@@ -1,0 +1,8 @@
+git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
+cd ffmpeg
+git reset --hard 9f7042f9cd
+
+emconfigure ./configure --cc=emcc --ar=emar --ranlib=emranlib --prefix=$(pwd)/../dist --enable-cross-compile --target-os=none --arch=x86_32 --cpu=generic --disable-stripping --enable-shared --disable-programs --disable-asm --disable-doc --disable-devices --disable-pthreads --disable-w32threads --disable-network --disable-debug --disable-xlib --disable-zlib --disable-sdl2 --disable-iconv --disable-everything --enable-protocol=file  --enable-decoder=hevc --enable-parser=hevc --enable-demuxer=hevc --enable-decoder=h264 --enable-parser=h264 --enable-demuxer=h264
+
+make -j4
+make install
